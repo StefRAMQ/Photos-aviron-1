@@ -1,12 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Cliquable</title>
     <style>
-        body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
-        img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        /* Ici, on gère la dimension de l'image via le CSS */
+        .image-redimensionnee {
+            width: 300px;  /* Largeur de l'image */
+            height: auto;   /* La hauteur s'ajuste pour garder les proportions */
+            border: 2px solid #333; /* Optionnel : une petite bordure */
+            transition: transform 0.3s; /* Petit effet au survol */
+        }
+
+        .image-redimensionnee:hover {
+            transform: scale(1.05); /* L'image grossit légèrement au survol */
+        }
     </style>
 </head>
 <body>
-    <img src="https://photos.app.goo.gl/CprD3xmr7VNGK8B88" alt="Equipe Toute en Marne à Schelcher">
+
+    <h1>Mon image cliquable</h1>
+    <a href="https://photos.app.goo.gl/nYVEfT5NVkUZ9npy6" target="_blank">
+        <img 
+            src="https://via.placeholder.com/600x400" 
+            alt="Description de l'image" 
+            class="image-redimensionnee"
+        >
+    </a>
+
+    <p>Cliquez sur l'image pour être redirigé.</p>
+
 </body>
 </html>
